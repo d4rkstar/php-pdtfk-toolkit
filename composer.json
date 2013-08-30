@@ -1,6 +1,6 @@
 {
     "name": "d4rkstar/php-pdtfk-toolkit",
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.0"
     }
 }
