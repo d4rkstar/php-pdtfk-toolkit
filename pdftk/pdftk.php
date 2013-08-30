@@ -34,7 +34,7 @@ class pdftk
     const VERSION = '0.1.2';
 
     //StartConfiguration
-    protected $sBin = '/usr/local/bin/pdftk';
+    protected $sBin = '/usr/bin/pdftk';
     //End Configuration
 
 
@@ -329,6 +329,7 @@ class pdftk
         $total_inputs = count($this->aInputFiles);
 
         //Assign each PDF a multi-char handle (pdftk-1.45)
+        /* @var $oFile pdftk_inputfile */
         foreach ($this->aInputFiles as $iKey => $oFile) {
             if ($oFile->getData() != null) {
                 $aCommand[] = "-";
@@ -437,6 +438,7 @@ class pdftk
         if ($bReturn) {
             return $pdfData;
         }
+        return null;
     }
 
     /**
@@ -446,7 +448,7 @@ class pdftk
      * @param string $sFilename The filename if your were to save the pdf
      * @param boolean $bReturn  Whether we should return the pdf in string format as well
      * @throws Exception
-     * @return type
+     * @return mixed void|string
      */
     public function inlineOutput($sFilename = 'output.pdf', $bReturn = false)
     {
@@ -471,6 +473,7 @@ class pdftk
         if ($bReturn) {
             return $pdfData;
         }
+        return null;
     }
 
     /**
