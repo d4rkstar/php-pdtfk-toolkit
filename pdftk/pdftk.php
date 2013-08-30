@@ -385,6 +385,8 @@ class pdftk
             $aCommand[] = '-';
         }
 
+        // TODO: add here handling of pdf info
+
         //Check for PDF password...
         if ($this->sOwnerPassword != null || $this->sUserPassword != null) {
 
