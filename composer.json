@@ -1,5 +1,5 @@
 {
-    "name": "d4rkstar/php-pdtfk-toolkit",
+    "name": "d4rkstar/php-pdftk-toolkit",
     "require": {
         "php": ">=5.3.0"
     }
